@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaiduLocationDemo-app/BaiduLocationDemo-app.iml" filepath="$PROJECT_DIR$/BaiduLocationDemo-app/BaiduLocationDemo-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiduTest.iml" filepath="$PROJECT_DIR$/BaiduTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiduTrace-app/BaiduTrace-app.iml" filepath="$PROJECT_DIR$/BaiduTrace-app/BaiduTrace-app.iml" />
+    </modules>
+  </component>
+</project>
