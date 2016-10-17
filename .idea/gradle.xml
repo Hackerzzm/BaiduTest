@@ -10,7 +10,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/BaiduLocationDemo-app" />
             <option value="$PROJECT_DIR$/BaiduTrace-app" />
-            <option value="$PROJECT_DIR$/JPushTest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

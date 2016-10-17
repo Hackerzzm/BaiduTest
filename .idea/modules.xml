@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/BaiduLocationDemo-app/BaiduLocationDemo-app.iml" filepath="$PROJECT_DIR$/BaiduLocationDemo-app/BaiduLocationDemo-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/BaiduTest.iml" filepath="$PROJECT_DIR$/BaiduTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/BaiduTrace-app/BaiduTrace-app.iml" filepath="$PROJECT_DIR$/BaiduTrace-app/BaiduTrace-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JPushTest/JPushTest.iml" filepath="$PROJECT_DIR$/JPushTest/JPushTest.iml" />
     </modules>
   </component>
 </project>
