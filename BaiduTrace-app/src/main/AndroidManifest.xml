@@ -164,7 +164,7 @@
         <!-- Required. AppKey copied from Portal -->
         <meta-data
             android:name="JPUSH_APPKEY"
-            android:value="561b82c5627d5b3345cd56cf" />
+            android:value="0d2d320c0902e1300775c98c" />
         <!--=====================================================================================-->
         <service
             android:name="com.baidu.trace.LBSTraceService"

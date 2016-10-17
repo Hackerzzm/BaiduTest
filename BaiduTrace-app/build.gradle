@@ -19,7 +19,7 @@ android {
 
         manifestPlaceholders = [
                 JPUSH_PKGNAME: "com.baidu.trackshow",
-                JPUSH_APPKEY : "561b82c5627d5b3345cd56cf", //JPush上注册的包名对应的appkey.
+                JPUSH_APPKEY : "0d2d320c0902e1300775c98c", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
     }
