@@ -1,12 +1,12 @@
 package com.baidu.trackshow;
 
 import android.annotation.SuppressLint;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,38 +40,47 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
      * 鹰眼服务ID，开发者创建的鹰眼服务对应的服务ID
      */
     protected static long serviceId = 125572;
-
-    /**
-     * 轨迹服务类型（0 : 不建立socket长连接， 1 : 建立socket长连接但不上传位置数据，2 : 建立socket长连接并上传位置数据）
-     */
-    private int traceType = 2;
-
     /**
      * 轨迹服务客户端
      */
     protected static LBSTraceClient client = null;
-
     /**
      * Entity监听器
      */
     protected static OnEntityListener entityListener = null;
-
-    private Button btnTrackUpload;
-    private Button btnTrackQuery;
-
     protected static MapView bmapView = null;
     protected static BaiduMap mBaiduMap = null;
-
+    protected static Context mContext = null;
+    /**
+     * 轨迹服务类型（0 : 不建立socket长连接， 1 : 建立socket长连接但不上传位置数据，2 : 建立socket长连接并上传位置数据）
+     */
+    private int traceType = 2;
+    private Button btnTrackUpload;
+    private Button btnTrackQuery;
     /**
      * 用于对Fragment进行管理
      */
     private FragmentManager fragmentManager;
-
     private TrackUploadFragment mTrackUploadFragment;
-
     private TrackQueryFragment mTrackQueryFragment;
 
-    protected static Context mContext = null;
+    /**
+     * 获取设备IMEI码
+     *
+     * @param context
+     * @return
+     */
+    protected static String getImei(Context context) {
+        String mImei = "NULL";
+        try {
+            mImei = ((TelephonyManager) context
+                    .getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+        } catch (Exception e) {
+            System.out.println("获取IMEI码失败");
+            mImei = "NULL";
+        }
+        return mImei;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -287,22 +296,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 
-    /**
-     * 获取设备IMEI码
-     *
-     * @param context
-     * @return
-     */
-    protected static String getImei(Context context) {
-        String mImei = "NULL";
-        try {
-            mImei = ((TelephonyManager) context
-                    .getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
-        } catch (Exception e) {
-            System.out.println("获取IMEI码失败");
-            mImei = "NULL";
-        }
-        return mImei;
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
 }

@@ -5,17 +5,11 @@ import android.content.Context;
 import android.os.Looper;
 import android.widget.Toast;
 
+import cn.jpush.android.api.JPushInterface;
+
 public class TrackApplication extends Application {
 
     private static Context context;
-
-    @Override
-    public void onCreate() {
-        // TODO Auto-generated method stub
-        super.onCreate();
-
-        context = getApplicationContext();
-    }
 
     public static Context getContext() {
         return context;
@@ -25,5 +19,14 @@ public class TrackApplication extends Application {
         Looper.prepare();
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
         Looper.loop();
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        context = getApplicationContext();
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
     }
 }
